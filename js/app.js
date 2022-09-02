@@ -1,4 +1,4 @@
-const suma = (a, b) => a + b;
+/*const suma = (a, b) => a + b;
 
 const division = (a, b) => a / b;
 
@@ -95,3 +95,4 @@ function opcionesDePago(producto) {
 
   return choice;
 }
+*/

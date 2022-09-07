@@ -1,4 +1,4 @@
-/*const suma = (a, b) => a + b;
+const suma = (a, b) => a + b;
 
 const division = (a, b) => a / b;
 
@@ -32,18 +32,7 @@ let producto4Obj = {
 
 let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj];
 
-while (condicion) {
-  let producto = opcionDeCompra();
 
-  if (producto != null) {
-    let formaPago = opcionesDePago(producto);
-
-    calculoPago(producto, formaPago);
-    condicion = false;
-  } else {
-    condicion = false;
-  }
-}
 
 function opcionDeCompra() {
   let opcion = parseInt(
@@ -60,6 +49,9 @@ function opcionDeCompra() {
     return productos[index];
   }
 }
+
+
+
 
 function calculoPago(producto, formaPago) {
   if (formaPago == 1) {
@@ -84,6 +76,69 @@ function calculoPago(producto, formaPago) {
   producto.accion('JOSHUA TE BANCO');
 }
 
+
+
+
+
+function opcionesDePago(producto) {
+  alert('El precio del ' + producto.nombre + ' es : $' + producto.precio);
+
+  let choice = prompt(
+    'Desea comprar el ' +
+      producto.nombre  +
+      ' en cuotas o al contado ?(Pagando al contado se le descuenta el IVA)\nSi desea:\n -Cuotas = 1\n -Contado = 2,\n -Salir del menu = 3'
+  );
+
+  return choice;
+}function opcionDeCompra() {
+  let opcion = parseInt(
+    prompt(
+      'Elige una opción de compra\n 1-Matafuego de 5kg ABC\n 2-Chaleco reflectivo\n 3-Balizas Reglamentarias\n 4-Comprar paquete entero\n 5-Salir del Menu de compra'
+    )
+  );
+
+  let index = opcion - 1;
+
+  if(index > productos.length){
+    return null;
+  }else{
+    return productos[index];
+  }
+}
+
+
+
+
+
+
+
+function calculoPago(producto, formaPago) {
+  if (formaPago == 1) {
+    let nroCuotas = parseInt(prompt('Ingresa la cantidad de cuotas: '));
+
+    let total = suma(producto.precio, iva(producto.precio))
+    let precioCuota = parseInt(division((total), nroCuotas));
+
+    alert(
+      'Usted pagará ' + nroCuotas + ' cuotas de : $' +
+        precioCuota +
+        '\n El precio Final es de: ' +
+        parseInt(total) +
+        '$' +
+        '\nGracias por su compra!!'
+    );
+  } else if (formaPago == 2) {
+    alert(
+      'Usted compro:\n ' + producto.nombre + ' por = $' + producto.precio + '\n Gracias por su compra =) '
+    );
+  }
+  producto.accion('JOSHUA TE BANCO');
+}
+
+
+
+
+
 function opcionesDePago(producto) {
   alert('El precio del ' + producto.nombre + ' es : $' + producto.precio);
 
@@ -95,4 +150,17 @@ function opcionesDePago(producto) {
 
   return choice;
 }
-*/
+
+while (condicion) {
+  let producto = opcionDeCompra();
+
+  if (producto != null) {
+    let formaPago = opcionesDePago(producto);
+
+    calculoPago(producto, formaPago);
+    condicion = false;
+  } else {
+    condicion = false;
+  }
+}
+

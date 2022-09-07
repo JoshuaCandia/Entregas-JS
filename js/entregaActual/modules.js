@@ -4,7 +4,7 @@ const division = (a, b) => a / b;
 
 const iva = (x) => x * 0.21;
 
-let condicion = true;
+
 
 let opcion = 0
 
@@ -44,13 +44,14 @@ function opcionDeCompra() {
         'Elige una opción de compra\n 1-Matafuego de 5kg ABC\n 2-Chaleco reflectivo\n 3-Balizas Reglamentarias\n 4-Comprar paquete entero\n 5-Salir del Menu de compra'
       )
     );
-  
     let index = opcion - 1;
-  
-    if(index > productos.length){
-      return null;
-    }else{
+    
+    if(index == 4){
+      return 5;
+    }else if(index <= productos.length){
       return productos[index];
+    }else{
+      return null;
     }
   }
   
@@ -96,4 +97,5 @@ function opcionDeCompra() {
   }
   
 
-  export {opcionDeCompra,calculoPago,opcionesDePago,condicion,opcion} 
+  export {opcionDeCompra,calculoPago,opcionesDePago,opcion} 
+  export {producto1Obj,producto2Obj,producto3Obj,producto4Obj}

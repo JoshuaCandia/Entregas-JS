@@ -26,7 +26,7 @@ let producto3Obj = {
 }
 
 let producto4Obj = {
-  nombre: 'Paquete',
+  nombre: 'Paquete',  
   precio: 20000,
   accion: (mensaje) => alert(mensaje)
 }

@@ -6,6 +6,7 @@ const iva = (x) => x * 0.21;
 
 let condicion = true;
 
+let opcion = 0
 
 let producto1Obj = {
   nombre: 'Matafuego',
@@ -26,7 +27,7 @@ let producto3Obj = {
 }
 
 let producto4Obj = {
-  nombre: 'Paquete',  
+  nombre: 'Paquete',
   precio: 20000,
   accion: (mensaje) => alert(mensaje)
 }
@@ -38,7 +39,7 @@ let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj];
 
 
 function opcionDeCompra() {
-    let opcion = parseInt(
+     opcion = parseInt(
       prompt(
         'Elige una opción de compra\n 1-Matafuego de 5kg ABC\n 2-Chaleco reflectivo\n 3-Balizas Reglamentarias\n 4-Comprar paquete entero\n 5-Salir del Menu de compra'
       )
@@ -95,4 +96,4 @@ function opcionDeCompra() {
   }
   
 
-  export {opcionDeCompra,calculoPago,opcionesDePago,condicion} 
+  export {opcionDeCompra,calculoPago,opcionesDePago,condicion,opcion} 

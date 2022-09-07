@@ -1,16 +1,19 @@
-import {opcionDeCompra,calculoPago,opcionesDePago,condicion} from "./modules.js";
+import {opcionDeCompra,calculoPago,opcionesDePago, condicion,opcion} from "./modules.js";
 
 
 while (condicion) {
   let producto = opcionDeCompra();
 
-  if (producto != null) {
+  if (  opcion == 1 || opcion == 2 || opcion == 3 || opcion == 4  ) {
     let formaPago = opcionesDePago(producto);
 
     calculoPago(producto, formaPago);
-    condicion = false;
-  } else {
-    condicion = false;
+    break;
+  } else if(opcion ==5){
+    break
+  }else{
+    alert("No ingreso una opcion valida")
+    continue
   }
 }
 

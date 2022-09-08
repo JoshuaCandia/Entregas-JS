@@ -1,4 +1,4 @@
-/*
+
 import {
   opcionDeCompra,
   calculoPago,
@@ -33,4 +33,3 @@ while (condicion) {
     continue;
   }
 }
-*/

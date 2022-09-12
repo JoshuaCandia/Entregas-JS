@@ -1,35 +1,25 @@
-
 import {
   opcionDeCompra,
   calculoPago,
   opcionesDePago,
-  opcion,
+  menuInicial,
 } from "./modules.js";
-import {
-  producto1Obj,
-  producto2Obj,
-  producto3Obj,
-  producto4Obj,
-} from "./modules.js";
+import { productos } from "./modules.js";
 
 let condicion = true;
 while (condicion) {
-  let producto = opcionDeCompra();
+  let opcionProducto = menuInicial();
 
-  if (
-    producto == producto1Obj ||
-    producto == producto2Obj ||
-    producto == producto3Obj ||
-    producto == producto4Obj
-  ) {
-    let formaPago = opcionesDePago(producto);
-
-    calculoPago(producto, formaPago);
+  if (opcionProducto == 0) {
     break;
-  } else if (producto == 5) {
-    break;
-  } else {
-    alert("No ingreso una opcion valida");
-    continue;
   }
+
+  let a = productos.find(function (producto) {
+    return producto.id == opcionProducto;
+  });
+
+  let producto = productos.find((producto) => producto.id == opcionProducto);
+  let formaPago = opcionesDePago(producto);
+  calculoPago(producto, formaPago);
+  break;
 }

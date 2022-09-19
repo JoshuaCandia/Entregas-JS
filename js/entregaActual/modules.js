@@ -1,6 +1,10 @@
+//Variables Globales
+
 const suma = (a, b) => a + b;
 const division = (a, b) => a / b;
 const iva = (x) => x * 0.21;
+
+//Objetos
 
 let producto1Obj = {
   id: 1,
@@ -26,7 +30,10 @@ let producto4Obj = {
   precio: 20000,
 };
 
+//Arrays
 let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj];
+
+//Funcion menu Inicial
 
 function menuInicial() {
   let eleccion = parseInt(
@@ -40,16 +47,22 @@ function menuInicial() {
   return 0;
 }
 
+//Funcion de Busqueda
+
 function menuBuscador() {
   let criterio = prompt("Introduzca el criterio de busqueda:");
 
-  let resultadoBusqueda = productos.filter((producto) =>producto.nombre.toLowerCase().includes(criterio));
+  let resultadoBusqueda = productos.filter((producto) =>
+    producto.nombre.toLowerCase().includes(criterio)
+  );
   if (resultadoBusqueda.length > 0) {
     return opcionDeCompra(resultadoBusqueda);
   } else {
     return opcionDeCompra(productos);
   }
 }
+
+//Funcion de compra
 
 function opcionDeCompra(listaProductos) {
   let condicionCompra = true;
@@ -83,6 +96,8 @@ function opcionDeCompra(listaProductos) {
   return producto.id;
 }
 
+//Funcion de cuotas
+
 function calculoPago(producto, formaPago) {
   if (formaPago == 1) {
     let nroCuotas = parseInt(prompt("Ingresa la cantidad de cuotas: "));
@@ -111,6 +126,8 @@ function calculoPago(producto, formaPago) {
   }
 }
 
+//Funcion Opciones de Pago
+
 function opcionesDePago(producto) {
   alert("El precio del " + producto.nombre + " es : $" + producto.precio);
 
@@ -123,4 +140,6 @@ function opcionesDePago(producto) {
   return choice;
 }
 
-export { menuInicial, opcionDeCompra, calculoPago, opcionesDePago,productos };
+//Exports
+
+export { menuInicial, opcionDeCompra, calculoPago, opcionesDePago, productos };

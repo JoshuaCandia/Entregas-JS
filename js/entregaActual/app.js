@@ -1,10 +1,8 @@
-import {
-  opcionDeCompra,
-  calculoPago,
-  opcionesDePago,
-  menuInicial,
-} from "./modules.js";
+import { calculoPago, opcionesDePago, menuInicial } from "./modules.js";
 import { productos } from "./modules.js";
+
+
+//App
 
 let condicion = true;
 while (condicion) {

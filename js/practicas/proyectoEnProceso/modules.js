@@ -3,21 +3,26 @@
 const suma = (a, b) => a + b;
 const division = (a, b) => a / b;
 const iva = (x) => x * 0.21;
+
 //Funcion menu Inicial
 
 function menuInicial() {
-  let eleccion = parseInt(prompt('Elige una opcion: \n1-Buscar Productos\n0-Salir'));
+  let eleccion = parseInt(
+    prompt("Elige una opcion: \n1-Buscar Productos\n0-Salir")
+  );
 
   while (eleccion == 1) {
     return menuBuscador();
   }
-  if (eleccion > 0 || eleccion < 1) return 0;
+  if (eleccion >0 ||eleccion < 1)
+
+  return 0;
 }
 
 //Funcion de Busqueda
 
 function menuBuscador() {
-  let criterio = prompt('Introduzca el criterio de busqueda:');
+  let criterio = prompt("Introduzca el criterio de busqueda:");
 
   let resultadoBusqueda = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(criterio)
@@ -36,17 +41,17 @@ function opcionDeCompra(listaProductos) {
   let opcion = 0;
 
   if (listaProductos == productos) {
-    alert('No existen productos con ese criterio de busqueda.');
+    alert("No existen productos con ese criterio de busqueda.");
   }
 
-  let mensaje = 'Elige una opción de compra\n';
+  let mensaje = "Elige una opción de compra\n";
 
   for (let index = 0; index < listaProductos.length; index++) {
     let producto = listaProductos[index];
-    mensaje += index + 1 + ' - ' + producto.nombre + '\n';
+    mensaje += index + 1 + " - " + producto.nombre + "\n";
   }
 
-  mensaje += '0 - Salir del Menu de compra';
+  mensaje += "0 - Salir del Menu de compra";
 
   while (condicionCompra) {
     opcion = parseInt(prompt(mensaje));
@@ -54,7 +59,7 @@ function opcionDeCompra(listaProductos) {
     condicionCompra = !(!isNaN(opcion) && opcion > -1 && opcion < 6);
 
     if (condicionCompra) {
-      alert('La opcion seleccionada es incorrecta');
+      alert("La opcion seleccionada es incorrecta");
     }
   }
 
@@ -67,28 +72,28 @@ function opcionDeCompra(listaProductos) {
 
 function calculoPago(producto, formaPago) {
   if (formaPago == 1) {
-    let nroCuotas = parseInt(prompt('Ingresa la cantidad de cuotas: '));
+    let nroCuotas = parseInt(prompt("Ingresa la cantidad de cuotas: "));
 
     let total = suma(producto.precio, iva(producto.precio));
     let precioCuota = parseInt(division(total, nroCuotas));
 
     alert(
-      'Usted pagará ' +
+      "Usted pagará " +
         nroCuotas +
-        ' cuotas de : $' +
+        " cuotas de : $" +
         precioCuota +
-        '\n El precio Final es de: ' +
+        "\n El precio Final es de: " +
         parseInt(total) +
-        '$' +
-        '\nGracias por su compra!!'
+        "$" +
+        "\nGracias por su compra!!"
     );
   } else if (formaPago == 2) {
     alert(
-      'Usted compro:\n ' +
+      "Usted compro:\n " +
         producto.nombre +
-        ' por = $' +
+        " por = $" +
         producto.precio +
-        '\n Gracias por su compra =) '
+        "\n Gracias por su compra =) "
     );
   }
 }
@@ -96,44 +101,40 @@ function calculoPago(producto, formaPago) {
 //Funcion Opciones de Pago
 
 function opcionesDePago(producto) {
-  alert('El precio del ' + producto.nombre + ' es : $' + producto.precio);
+  alert("El precio del " + producto.nombre + " es : $" + producto.precio);
 
   let choice = prompt(
-    'Desea comprar el ' +
+    "Desea comprar el " +
       producto.nombre +
-      ' en cuotas o al contado ?(Pagando al contado se le descuenta el IVA)\nSi desea:\n -Cuotas = 1\n -Contado = 2,\n -Salir del menu = 3'
+      " en cuotas o al contado ?(Pagando al contado se le descuenta el IVA)\nSi desea:\n -Cuotas = 1\n -Contado = 2,\n -Salir del menu = 3"
   );
 
   return choice;
-}
-
-function buscarProductos(textoBusqueda) {
-  return productos.filter((producto) => producto.nombre.toLowerCase().includes(textoBusqueda));
 }
 
 //Objetos
 
 let producto1Obj = {
   id: 1,
-  nombre: 'Matafuego',
+  nombre: "Matafuego",
   precio: 15500,
 };
 
 let producto2Obj = {
   id: 2,
-  nombre: 'Chaleco',
+  nombre: "Chaleco",
   precio: 2500,
 };
 
 let producto3Obj = {
   id: 3,
-  nombre: 'Balizas',
+  nombre: "Balizas",
   precio: 3000,
 };
 
 let producto4Obj = {
   id: 4,
-  nombre: 'Paquete',
+  nombre: "Paquete",
   precio: 20000,
 };
 
@@ -142,4 +143,4 @@ let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj];
 
 //Exports
 
-export { menuInicial, opcionDeCompra, calculoPago, opcionesDePago, productos, buscarProductos };
+export { menuInicial, opcionDeCompra, calculoPago, opcionesDePago, productos };

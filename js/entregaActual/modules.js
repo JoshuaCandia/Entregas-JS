@@ -3,36 +3,6 @@
 const suma = (a, b) => a + b;
 const division = (a, b) => a / b;
 const iva = (x) => x * 0.21;
-
-//Objetos
-
-let producto1Obj = {
-  id: 1,
-  nombre: "Matafuego",
-  precio: 15500,
-};
-
-let producto2Obj = {
-  id: 2,
-  nombre: "Chaleco",
-  precio: 2500,
-};
-
-let producto3Obj = {
-  id: 3,
-  nombre: "Balizas",
-  precio: 3000,
-};
-
-let producto4Obj = {
-  id: 4,
-  nombre: "Paquete",
-  precio: 20000,
-};
-
-//Arrays
-let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj];
-
 //Funcion menu Inicial
 
 function menuInicial() {
@@ -40,9 +10,10 @@ function menuInicial() {
     prompt("Elige una opcion: \n1-Buscar Productos\n0-Salir")
   );
 
-  if (eleccion == 1) {
+  while (eleccion == 1) {
     return menuBuscador();
   }
+  if (eleccion >0 ||eleccion < 1)
 
   return 0;
 }
@@ -139,6 +110,35 @@ function opcionesDePago(producto) {
 
   return choice;
 }
+
+//Objetos
+
+let producto1Obj = {
+  id: 1,
+  nombre: "Matafuego",
+  precio: 15500,
+};
+
+let producto2Obj = {
+  id: 2,
+  nombre: "Chaleco",
+  precio: 2500,
+};
+
+let producto3Obj = {
+  id: 3,
+  nombre: "Balizas",
+  precio: 3000,
+};
+
+let producto4Obj = {
+  id: 4,
+  nombre: "Paquete",
+  precio: 20000,
+};
+
+//Arrays
+let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj];
 
 //Exports
 

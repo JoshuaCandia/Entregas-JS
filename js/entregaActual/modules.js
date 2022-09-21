@@ -3,6 +3,9 @@
 const suma = (a, b) => a + b;
 const division = (a, b) => a / b;
 const iva = (x) => x * 0.21;
+
+/*--------------------------------------------------------------------------------------------------*/
+
 //Funcion menu Inicial
 
 function menuInicial() {
@@ -115,13 +118,15 @@ function buscarProductos(textoBusqueda) {
   );
 }
 
+/*--------------------------------------------------------------------------------------------------*/
+
 //Objetos
 
 let producto1Obj = {
   id: 1,
   nombre: "Matafuego",
   precio: 15500,
-  imagen: "/images/matafuego.jpg"
+  imagen: "/images/matafuego.jpg",
 };
 
 let producto2Obj = {
@@ -135,18 +140,22 @@ let producto3Obj = {
   id: 3,
   nombre: "Balizas",
   precio: 3000,
-  imagen: "/images/balizas.jpg"
+  imagen: "/images/balizas.jpg",
 };
 
 let producto4Obj = {
   id: 4,
   nombre: "Paquete",
   precio: 20000,
-  imagen: "/images/paquete.jpg"
+  imagen: "/images/paquete.jpg",
 };
+
+/*--------------------------------------------------------------------------------------------------*/
 
 //Arrays
 let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj];
+
+/*--------------------------------------------------------------------------------------------------*/
 
 //Exports
 

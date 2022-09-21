@@ -1,17 +1,11 @@
-import { buscarProductos } from './modules.js';
+import { buscarProductos } from "./modules.js";
 
-let buscador = document.getElementById('buscador');
-/* Formas de manejar eventos desde el dom */
-let botonBuscador = document.getElementById('botonBuscador');
+let buscador = document.getElementById("buscador");
 
-/*
-botonBuscador.addEventListener('click', () => {
-
-});
-*/
+let botonBuscador = document.getElementById("botonBuscador");
 
 botonBuscador.onclick = () => {
-  let listado = document.getElementById('listado');
+  let listado = document.getElementById("listado");
 
   let resultados = buscarProductos(buscador.value);
 
@@ -20,29 +14,31 @@ botonBuscador.onclick = () => {
 
     resultados.forEach((resultado) => {
       productos += "<div class='producto'><ul>";
-      productos += '<li>Nombre: ' + resultado.nombre + '</li>';
-      productos += '<li>Precio: $' + resultado.precio + '</li>';
+      productos += "<img class='imagen__producto' src=" + resultado.imagen + " >"
+      productos += "<li>Nombre: " + resultado.nombre + "</li>";
+      productos += "<li>Precio: $" + resultado.precio + "</li>";
       productos += "<li class='botonComprar'></li>";
-      productos += '</ul></div>';
+      productos += "</ul></div>";
     });
 
-    productos += '</div>';
+    productos += "</div>";
     listado.innerHTML = productos;
 
-    let elementosComprar = document.getElementsByClassName('botonComprar');
+    let elementosComprar = document.getElementsByClassName("botonComprar");
 
     for (let index = 0; index < elementosComprar.length; index++) {
       const element = elementosComprar[index];
 
-      let boton = document.createElement('button');
-      boton.innerText = 'Comprar';
+      let boton = document.createElement("button");
+      boton.innerText = "Comprar";
       boton.onclick = () => {
-        alert('Comprado');
-      };      
+        alert("Comprado");
+      };
 
       element.appendChild(boton);
     }
   } else {
-    listado.innerHTML = '<p>No existen productos con el criterio de busqueda</p>';
+    listado.innerHTML =
+      "<p>No existen productos con el criterio de busqueda</p>";
   }
 };

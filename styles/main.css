@@ -6,47 +6,79 @@ body {
   background-image: url(/images/background.jpg);
 }
 
-.index__main .inputBusqueda {
+.header__index {
+  display: flex;
+  align-items: center;
+}
+.header__index .logo {
+  width: 200px;
+}
+.header__index .nav__index {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 70%;
+}
+.header__index .nav__index li {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  list-style: none;
+}
+.header__index .nav__index li a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.link__color {
+  color: lightslategrey;
+}
+
+.inputBusqueda {
   height: 10%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding-top: 10%;
 }
-.index__main .inputBusqueda #buscador {
+.inputBusqueda #buscador {
   width: 600px;
   height: 30px;
   border: none;
   border-radius: 5%;
 }
-.index__main #listado p {
+
+#listado p {
   font-size: 25px;
   color: white;
   margin-top: 5%;
   text-align: center;
 }
-.index__main .productos {
+
+.productos {
   display: flex;
   justify-content: center;
 }
-.index__main .productos .producto {
+.productos .producto {
   margin-top: 10%;
 }
-.index__main .productos .producto ul {
+.productos .producto ul {
   list-style: none;
 }
-.index__main .productos .producto ul li {
+.productos .producto ul li {
   font-size: 20px;
   color: white;
   text-align: center;
 }
-.index__main .imagen__producto {
+
+.imagen__producto {
   margin-top: 10%;
   border: 2px solid black;
   width: 300px;
   height: 300px;
 }
 
+/*-------------------------------------------------------------------------------------------------------------------*/
 /*Botones*/
 #botonBuscador {
   margin-left: 1%;
@@ -95,4 +127,36 @@ body {
   background-color: #f3f4f6;
   border-color: rgba(27, 31, 35, 0.1490196078);
   transition-duration: 0.1s;
+}
+
+/*Titulo*/
+.titulo {
+  text-align: center;
+  margin-left: 37%;
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg, #747474 0%, #ffffff 29%, #a7a7a7 67%, #ffffff 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textclip 2s linear infinite;
+          animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 30px;
+}
+
+@-webkit-keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }/*# sourceMappingURL=main.css.map */

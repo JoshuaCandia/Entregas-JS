@@ -1,8 +1,20 @@
 import { buscarProductos } from "./modules.js";
 
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
 let buscador = document.getElementById("buscador");
 
 let botonBuscador = document.getElementById("botonBuscador");
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------*--App----------------------------------------------------*/
 
 botonBuscador.onclick = () => {
   let listado = document.getElementById("listado");

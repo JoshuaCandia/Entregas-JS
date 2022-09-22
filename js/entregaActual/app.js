@@ -44,7 +44,11 @@ botonBuscador.onclick = () => {
       let boton = document.createElement("button");
       boton.innerText = "Comprar";
       boton.onclick = () => {
-        alert("Comprado");
+        Swal.fire(
+          'Comprado',
+          'Muchas Gracias!',
+          'success'
+        )
       };
 
       element.appendChild(boton);

@@ -11,7 +11,9 @@ body {
   align-items: center;
 }
 .header__index .logo {
-  width: 200px;
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 150px;
 }
 .header__index .nav__index {
   display: flex;
@@ -106,6 +108,7 @@ body {
 }
 
 .botonComprar button {
+  margin-top: 10px;
   display: inline-block;
   outline: 0;
   cursor: pointer;

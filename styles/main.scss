@@ -48,6 +48,7 @@ body {
   }
 }
 #listado {
+  margin-left: 10%;
   p {
     font-size: 25px;
     color: white;
@@ -56,14 +57,15 @@ body {
   }
 }
 .productos {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 
   .producto {
     margin-top: 10%;
     ul {
       list-style: none;
       li {
+        width: 50%;
         font-size: 20px;
         color: white;
         text-align: center;
@@ -73,9 +75,14 @@ body {
 }
 .imagen__producto {
   margin-top: 10%;
+  margin-bottom: 4%;
   border: 2px solid black;
-  width: 300px;
+  width: 50%;
   height: 300px;
+}
+
+.footer__index {
+  margin-top: 10%a;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -166,4 +173,10 @@ body {
   to {
     background-position: 200% center;
   }
+}
+
+.imagen__producto {
+  -webkit-box-shadow: 6px 6px 57px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 57px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 57px -3px rgba(0, 0, 0, 0.75);
 }

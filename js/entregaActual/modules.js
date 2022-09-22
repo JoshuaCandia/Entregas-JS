@@ -149,11 +149,42 @@ let producto4Obj = {
   precio: 20000,
   imagen: "/images/paquete.jpg",
 };
+let producto5Obj = {
+  id: 4,
+  nombre: "Matafuego x6 lts AK",
+  precio: 32350,
+  imagen: "/images/acetato.jpg",
+};
+let producto6Obj = {
+  id: 4,
+  nombre: "Matafuego x5kg Co2",
+  precio: 54000,
+  imagen: "/images/co2.png",
+};
+let producto7Obj = {
+  id: 4,
+  nombre: "Botiquin de Madera N°25",
+  precio: 12500,
+  imagen: "/images/botiquin.jpg",
+};
+let producto8Obj = {
+  id: 4,
+  nombre: "Carteleria Variada",
+  precio: 1000,
+  imagen: "/images/carteles.png",
+};
+let producto9Obj = {
+  id: 4,
+  nombre: "Sifon Drago + Garrafa ",
+  precio: 23000,
+  imagen: "/images/sifon.png",
+};
+
 
 /*--------------------------------------------------------------------------------------------------*/
 
 //Arrays
-let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj];
+let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj, producto5Obj,producto6Obj,producto7Obj,producto8Obj,producto9Obj];
 
 /*--------------------------------------------------------------------------------------------------*/
 

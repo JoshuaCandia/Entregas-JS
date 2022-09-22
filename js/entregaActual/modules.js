@@ -175,7 +175,7 @@ let producto8Obj = {
 };
 let producto9Obj = {
   id: 4,
-  nombre: "Sifon Drago + Garrafa ",
+  nombre: "Sifon + Garrafa ",
   precio: 23000,
   imagen: "/images/sifon.png",
 };

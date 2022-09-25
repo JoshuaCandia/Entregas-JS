@@ -1,4 +1,4 @@
-/*--------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
 //Objetos
 
 let producto1Obj = {
@@ -59,16 +59,14 @@ let producto9Obj = {
   imagen: "/images/sifon.png",
 };
 
-/*--------------------------------------------------------------------------------------------------*/
-
+/*---------------------------------------------------------------------------------*/
 //Variables Globales
 
 const suma = (a, b) => a + b;
 const division = (a, b) => a / b;
 const iva = (x) => x * 0.21;
 
-/*--------------------------------------------------------------------------------------------------*/
-
+/*---------------------------------------------------------------------------------*/
 //Funcion menu Inicial
 
 function menuInicial() {
@@ -81,7 +79,7 @@ function menuInicial() {
   }
   if (eleccion > 0 || eleccion < 1) return 0;
 }
-
+/*---------------------------------------------------------------------------------*/
 //Funcion de Busqueda
 
 function menuBuscador() {
@@ -96,7 +94,7 @@ function menuBuscador() {
     return opcionDeCompra(productos);
   }
 }
-
+/*---------------------------------------------------------------------------------*/
 //Funcion de compra
 
 function opcionDeCompra(listaProductos) {
@@ -130,7 +128,7 @@ function opcionDeCompra(listaProductos) {
 
   return producto.id;
 }
-
+/*---------------------------------------------------------------------------------*/
 //Funcion de cuotas
 
 function calculoPago(producto, formaPago) {
@@ -161,6 +159,7 @@ function calculoPago(producto, formaPago) {
   }
 }
 
+/*---------------------------------------------------------------------------------*/
 //Funcion Opciones de Pago
 
 function opcionesDePago(producto) {
@@ -175,24 +174,30 @@ function opcionesDePago(producto) {
   return choice;
 }
 
+/*---------------------------------------------------------------------------------*/
+//Function Buscar Productos
+
 function buscarProductos(textoBusqueda) {
   return productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(textoBusqueda)
   );
 }
 
-/*--------------------------------------------------------------------------------------------------*/
-
-
-
-
-/*--------------------------------------------------------------------------------------------------*/
-
+/*---------------------------------------------------------------------------------*/
 //Arrays
-let productos = [producto1Obj, producto2Obj, producto3Obj, producto4Obj, producto5Obj,producto6Obj,producto7Obj,producto8Obj,producto9Obj];
+let productos = [
+  producto1Obj,
+  producto2Obj,
+  producto3Obj,
+  producto4Obj,
+  producto5Obj,
+  producto6Obj,
+  producto7Obj,
+  producto8Obj,
+  producto9Obj,
+];
 
-/*--------------------------------------------------------------------------------------------------*/
-
+/*---------------------------------------------------------------------------------*/
 //Exports
 
 export {
@@ -203,4 +208,4 @@ export {
   productos,
   buscarProductos,
 };
-/*--------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/

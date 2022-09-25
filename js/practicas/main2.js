@@ -419,6 +419,10 @@ console.log("-------------------------------------");
 Todo  Retornar Funciones
 */
 
+/*
+Todo #Ejemplo 1
+*/
+
 function mayorQue(n) {
   return (m) => m > n;
 }
@@ -433,6 +437,7 @@ let mayorQueDiez = mayorQue(10);
 
 console.log(mayorQueDiez(12));
 console.log(mayorQueDiez(8));
+console.log(mayorQueDiez(10));
 console.log("---------------------------------------------");
 
 /*
@@ -448,8 +453,23 @@ console.log("---------------------------------------------");
 /*---------------------------------------------------------------------------------*/
 
 /*
-Todo
+Todo #Ejemplo 2
 */
+
+function asignarOperacion(op) {
+  if (op == "sumar") {
+    return (a, b) => a + b;
+  } else if (op == "restar") {
+    return (a, b) => a - b;
+  }
+}
+
+let sumar = asignarOperacion("sumar");
+let restar = asignarOperacion("restar");
+
+console.log(sumar(4, 6));
+console.log(restar(20,10))
+console.log("---------------------------------------------");
 
 /*---------------------------------------------------------------------------------*/
 

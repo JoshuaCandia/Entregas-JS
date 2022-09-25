@@ -468,20 +468,82 @@ let sumar = asignarOperacion("sumar");
 let restar = asignarOperacion("restar");
 
 console.log(sumar(4, 6));
-console.log(restar(20,10))
+console.log(restar(20, 10));
 console.log("---------------------------------------------");
 
 /*---------------------------------------------------------------------------------*/
 
 /*
-Todo
+Todo Recibir Funciones como Parametro
 */
-
-/*---------------------------------------------------------------------------------*/
 
 /*
-Todo
+Todo #Ejemplo 1
 */
+
+function porCadaUno(arr, funct) {
+  for (const el of arr) {
+    funct(el);
+  }
+}
+
+const numeros = [1, 2, 3, 4];
+
+console.log(`La funcion Recibe un array como primer parametro y una funcion
+como segundo parametro, recorre el array por el for of y, por cada elemento
+hace un llamado a la funcion mencionada enviando el elemento por parametro`);
+
+porCadaUno(numeros, console.log);
+
+console.log("---------------------------------------------");
+
+let total = 0;
+
+function acumular(num) {
+  total += num;
+}
+
+console.log(`En este caso, la funcion va a sumar cada numero iterado del array
+
+`);
+porCadaUno(numeros, acumular);
+console.log(total);
+
+console.log("---------------------------------------------");
+
+/*
+!----------------------Metodos de Busqueda y Transformacion-----------------------
+*/
+
+/*
+Todo Metodo For Each itera sobre el array y ejecuta la funcion parametro en los elem
+*/
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+console.log(
+  "Con For each por cada elemento del array realiza la operacion deseada"
+);
+
+numbers.forEach((parametro) => {
+  //Ejecuta instrucciones deseadas
+  if (parametro % 3 == 0) {
+    console.log(parametro + " Es multiplo de 3");
+  }
+});
+console.log("---------------------------------------------");
+
+/*
+ * Ejemplo 2
+ */
+stock.forEach((product) => {
+  console.log(
+  `
+  ${product.nombre}
+  ${product.precio}
+  `
+  );
+});
 
 /*---------------------------------------------------------------------------------*/
 

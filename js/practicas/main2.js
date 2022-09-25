@@ -487,7 +487,7 @@ function porCadaUno(arr, funct) {
   }
 }
 
-const numeros = [1, 2, 3, 4];
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 console.log(`La funcion Recibe un array como primer parametro y una funcion
 como segundo parametro, recorre el array por el for of y, por cada elemento
@@ -511,9 +511,125 @@ console.log(total);
 
 console.log("---------------------------------------------");
 
+
+
+
+
 /*
 !----------------------Metodos de Busqueda y Transformacion-----------------------
 */
+
+/*
+Todo Ejemplo function que consulte al usuario opcion deseada
+*/
+
+/*
+ * <<<<<<<<Opcion del Usuario>>>>>>>>
+ */
+
+// let opcion = parseInt(
+//   prompt(`Ingrese el numero de la opcion que desea:
+// 1 - Ver catálogo de libros
+// 2 - Agregar un libro a nuestro catálogo
+// 3 - Eliminar un libro de nuestro catálogo
+// 4 - Encontrar por titulo
+// 5 - Buscar libros de un mismo autor
+// 0 - Salir del menú`)
+// );
+
+/*
+ * <<<<<<<<Invocación de funcion>>>>>>>>
+ */
+// menu(opcion);
+
+/*
+ * Funciones Globales
+ */
+function mostrarCatalogo(arr) {
+  arr.forEach((libro) => {
+    libro.mostrarDatos();
+  });
+}
+
+/*
+ * <<<<<<<<Declaracion de Funcion Constructora>>>>>>>>
+ */
+function libros(id, titulo, autor, añoDePublicacion, precio) {
+  this.id = id;
+  this.titulo = titulo;
+  this.autor = autor;
+  this.añoDePublicacion = añoDePublicacion;
+  this.precio = precio;
+
+  /*
+   * Metodo Personalizado
+   */
+
+  this.mostrarDatos = function () {
+    console.log(`El nombre del libro es ${this.titulo},y su precio es
+    de $${this.precio}`);
+  };
+}
+
+/*
+ * <<<<<<<<Declaracion de Objetos>>>>>>>>
+ */
+const lib1 = new libros(1, "Peter Pan", "James Matthew Barrie", 1911, 10500);
+
+const lib2 = new libros(
+  2,
+  "Las Aventuras de Sherlock Holmes",
+  "Arthur Conan Doyle",
+  1892,
+  3200
+);
+
+const lib3 = new libros(
+  3,
+  "Cien Años de Soledad",
+  "Gabriel García Márquez",
+  1967,
+  5430
+);
+
+const lib4 = new libros(4, "1984", "George Orwell", 1949, 2500);
+
+const lib5 = new libros(5, "El Alquimista", "Paulo Coelho", 1988, 2000);
+
+const lib6 = new libros(6, "Muerte en el Nilo", "Agatha Christie", 1937, 7900);
+
+const libreria = [];
+libreria.push(lib1, lib2, lib3, lib4, lib5, lib6);
+
+function menu(opcionSeleccionada) {
+  switch (opcionSeleccionada) {
+    case 0:
+      salir = true;
+      alert(`Gracias por visitarnos,vuelva pronto :D`);
+      break;
+    case 1:
+      console.log(`Todos los titulos de nuestro catalogo estan disponibles
+
+      `);
+      mostrarCatalogo(libreria);
+      alert("En la consola puede ver el catalogo");
+
+      break;
+    case 2:
+      break;
+    case 3:
+      break;
+    case 4:
+      break;
+    case 5:
+      break;
+    case 6:
+      break;
+
+    default:
+      break;
+  }
+}
 
 /*
 Todo Metodo For Each itera sobre el array y ejecuta la funcion parametro en los elem
@@ -538,17 +654,65 @@ console.log("---------------------------------------------");
  */
 stock.forEach((product) => {
   console.log(
-  `
+    `
   ${product.nombre}
   ${product.precio}
   `
   );
 });
 
+console.log("---------------------------------------------");
+
 /*---------------------------------------------------------------------------------*/
 
 /*
-Todo
+Todo Metodo Find
+*/
+
+const cursos = [
+  { nombre: "Javascript", precio: 15000 },
+  { nombre: "ReactJS", precio: 22000 },
+];
+
+console.log(`
+Find busca en el array y retorna el primer elemento que encuentra
+
+`);
+
+const resultadoFind = cursos.find((el) => el.nombre === "ReactJS");
+const resultadoFind2 = cursos.find((el) => el.nombre === "DW");
+
+console.log(resultadoFind);
+console.log(resultadoFind2);
+
+console.log("---------------------------------------------");
+
+let resultado = numeros.find((elem) => elem > 5);
+
+console.log(resultado);
+
+console.log("---------------------------------------------");
+
+let libroBuscado = libreria.find(
+  (libro) => libro.autor === "James Matthew Barrie"
+);
+console.log(libroBuscado);
+
+console.log("---------------------------------------------");
+
+/*---------------------------------------------------------------------------------*/
+/*
+Todo 
+*/
+
+/*---------------------------------------------------------------------------------*/
+/*
+Todo 
+*/
+
+/*---------------------------------------------------------------------------------*/
+/*
+Todo 
 */
 
 /*---------------------------------------------------------------------------------*/

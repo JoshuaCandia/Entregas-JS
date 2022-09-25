@@ -511,10 +511,6 @@ console.log(total);
 
 console.log("---------------------------------------------");
 
-
-
-
-
 /*
 !----------------------Metodos de Busqueda y Transformacion-----------------------
 */
@@ -576,21 +572,9 @@ function libros(id, titulo, autor, añoDePublicacion, precio) {
  */
 const lib1 = new libros(1, "Peter Pan", "James Matthew Barrie", 1911, 10500);
 
-const lib2 = new libros(
-  2,
-  "Las Aventuras de Sherlock Holmes",
-  "Arthur Conan Doyle",
-  1892,
-  3200
-);
+const lib2 = new libros(2, "Sherlock Holmes", "Arthur Conan Doyle", 1892, 3200);
 
-const lib3 = new libros(
-  3,
-  "Cien Años de Soledad",
-  "Gabriel García Márquez",
-  1967,
-  5430
-);
+const lib3 = new libros(3, "Cien Años de Soledad", "G. García M.", 1967, 5430);
 
 const lib4 = new libros(4, "1984", "George Orwell", 1949, 2500);
 

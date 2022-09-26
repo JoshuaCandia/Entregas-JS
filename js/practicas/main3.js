@@ -34,7 +34,7 @@ console.log(subtitulo)
 
 console.log("---------------------------------------------");
 
-let paises = document.getElementsByClassName("paises")
+let paises = document.getElementsByc    c   ccccccccwqqqqqq1cClassName("paises")
 console.log(paises)
 
 console.log("---------------------------------------------");

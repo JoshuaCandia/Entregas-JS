@@ -520,55 +520,7 @@ Todo Ejemplo function que consulte al usuario opcion deseada
 */
 
 /*
- * <<<<<<<<Opcion del Usuario>>>>>>>>
- */
-
-// let opcion = parseInt(
-//   prompt(`Ingrese el numero de la opcion que desea:
-// 1 - Ver catálogo de libros
-// 2 - Agregar un libro a nuestro catálogo
-// 3 - Eliminar un libro de nuestro catálogo
-// 4 - Encontrar por titulo
-// 5 - Buscar libros de un mismo autor
-// 0 - Salir del menú`)
-// );
-
-/*
- * <<<<<<<<Invocación de funcion>>>>>>>>
- */
-// menu(opcion);
-
-/*
- * Funciones Globales
- */
-function mostrarCatalogo(arr) {
-  arr.forEach((libro) => {
-    libro.mostrarDatos();
-  });
-}
-
-/*
- * <<<<<<<<Declaracion de Funcion Constructora>>>>>>>>
- */
-function libros(id, titulo, autor, añoDePublicacion, precio) {
-  this.id = id;
-  this.titulo = titulo;
-  this.autor = autor;
-  this.añoDePublicacion = añoDePublicacion;
-  this.precio = precio;
-
-  /*
-   * Metodo Personalizado
-   */
-
-  this.mostrarDatos = function () {
-    console.log(`El nombre del libro es ${this.titulo},y su precio es
-    de $${this.precio}`);
-  };
-}
-
-/*
- * <<<<<<<<Declaracion de Objetos>>>>>>>>
+ * <<<<<<<<<<<<Declaracion de Objetos>>>>>>>>>>>>
  */
 const lib1 = new libros(1, "Peter Pan", "James Matthew Barrie", 1911, 10500);
 
@@ -584,6 +536,62 @@ const lib6 = new libros(6, "Muerte en el Nilo", "Agatha Christie", 1937, 7900);
 
 const libreria = [];
 libreria.push(lib1, lib2, lib3, lib4, lib5, lib6);
+
+/*---------------------------------------------------------------------------------*/
+
+/*
+ * Funciones Globales
+ */
+
+/*
+ *<<<<Mostar Catalogo>>>>
+ */
+
+function mostrarCatalogo(arr) {
+  arr.forEach((libro) => {
+    libro.mostrarDatos();
+  });
+}
+
+/*
+ *<<<<Buscar Por Titulo>>>>
+ */
+
+function buscarPorTitulo() {
+  let tituloBuscado = prompt("Ingrese el titulo que desea encontrar"); //Prompt
+  let tituloEncontrado = libreria.find(
+    (titulo) => titulo.titulo.toLowerCase() == tituloBuscado.toLowerCase()
+  );
+  if (tituloEncontrado == undefined) {
+    alert("No se encontro su libro");
+  } else {
+    console.log(tituloEncontrado);
+  }
+}
+
+/*
+ *<<<<Buscar libros del mismo Autor>>>>
+ */
+
+// function librosDelMismoAutor() {
+//   let buscarAutor = prompt("Ingrese el autor que desea encontrar");
+//   let busqueda = libreria.filter(
+//     (book) => book.autor.toLowerCase() == buscarAutor.toLowerCase()
+//   );
+
+//   if (busqueda.length == 0) {
+//     console.log("No se encontro ningun libro de este autor");
+//   } else {
+//     console.log("Las coincidencias con este autor son:");
+//     for (const libroHallado of busqueda) {
+//       libroHallado.mostrarDatos
+//     }
+//   }
+// }
+
+/*
+ *<<<<Funcion Menu>>>>
+ */
 
 function menu(opcionSeleccionada) {
   switch (opcionSeleccionada) {
@@ -604,8 +612,10 @@ function menu(opcionSeleccionada) {
     case 3:
       break;
     case 4:
+      buscarPorTitulo();
       break;
     case 5:
+      // librosDelMismoAutor();
       break;
     case 6:
       break;
@@ -614,6 +624,69 @@ function menu(opcionSeleccionada) {
       break;
   }
 }
+
+/*
+ * <<<<<<<<<<<<Declaracion de Funcion Constructora>>>>>>>>>>>>
+ */
+function libros(id, titulo, autor, añoDePublicacion, precio) {
+  this.id = id;
+  this.titulo = titulo;
+  this.autor = autor;
+  this.añoDePublicacion = añoDePublicacion;
+  this.precio = precio;
+
+  /*
+   * Metodo Personalizado
+   */
+
+  this.mostrarDatos = function () {
+    console.log(`El nombre del libro es ${this.titulo},y su precio es
+    de $${this.precio}`);
+  };
+}
+
+
+
+/*
+ * <<<<<<<<Opcion del Usuario>>>>>>>>
+ */
+
+// let opcion = parseInt(
+//   prompt(`Ingrese el numero de la opcion que desea:
+// 1 - Ver catálogo de libros
+// 2 - Agregar un libro a nuestro catálogo
+// 3 - Eliminar un libro de nuestro catálogo
+// 4 - Encontrar por titulo
+// 5 - Buscar libros de un mismo autor
+// 0 - Salir del menú`)
+// );
+
+/*
+ * <<<<<<<<Invocación de funcion>>>>>>>>
+ */
+
+/*
+ * <<<<<<<<Agregar Libro>>>>>>>>
+ */
+
+function nuevoLibro() {
+  let tituloIngresado = prompt("Ingrese titulo");
+  let autorIngresado = prompt("Ingrese el autor");
+  let añoIngresado = parseInt(prompt("Ingrese año de publicacion"));
+  let precioIngresado = parseInt(prompt("Ingrese el Precio"));
+  let libroCreado = new libros(
+    libreria.length,
+    tituloIngresado,
+    autorIngresado,
+    añoIngresado,
+    precioIngresado
+  );
+
+  console.log(libroCreado);
+  libreria.push(libroCreado);
+  console.log(libreria);
+}
+/*---------------------------------------------------------------------------------*/
 
 /*
 Todo Metodo For Each itera sobre el array y ejecuta la funcion parametro en los elem
@@ -656,6 +729,8 @@ Todo Metodo Find
 const cursos = [
   { nombre: "Javascript", precio: 15000 },
   { nombre: "ReactJS", precio: 22000 },
+  { nombre: "AngularJS", precio: 22000 },
+  { nombre: "Desarrollo Web", precio: 16000 },
 ];
 
 console.log(`
@@ -677,26 +752,60 @@ console.log(resultado);
 
 console.log("---------------------------------------------");
 
-let libroBuscado = libreria.find(
+let autorEncontrado = libreria.find(
   (libro) => libro.autor === "James Matthew Barrie"
 );
-console.log(libroBuscado);
+console.log(autorEncontrado);
+
+console.log("---------------------------------------------");
 
 console.log("---------------------------------------------");
 
 /*---------------------------------------------------------------------------------*/
 /*
-Todo 
+Todo Metodo Filter
 */
+
+const resultadoFilter = cursos.filter((el) => el.nombre.includes("JS"));
+const resultadoFilter2 = cursos.filter((el) => el.precio < 14000);
+
+console.log(resultadoFilter);
+console.log(resultadoFilter2);
+
+console.log("---------------------------------------------");
 
 /*---------------------------------------------------------------------------------*/
 /*
-Todo 
+Todo Metodo Some
 */
+
+console.log(cursos.some((el) => el.nombre == "Desarrollo Web"));
+//true
+
+console.log(cursos.some((el) => el.nombre == "VueJS"));
+//false
+
+console.log("---------------------------------------------");
 
 /*---------------------------------------------------------------------------------*/
 /*
-Todo 
+Todo Metodo Map
 */
+
+const names = cursos.map((el) => el.nombre);
+console.log(names);
+
+console.log("---------------------------------------------");
+
+console.log(
+  "El metodo map devuelve una nueva array con los valores actualizados"
+);
+const actualizado = cursos.map((el) => {
+  return {
+    nombre: el.nombre,
+    precio: el.precio * 1.25,
+  };
+});
+console.log(actualizado);
 
 /*---------------------------------------------------------------------------------*/

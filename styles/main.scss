@@ -3,11 +3,13 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-image: url(/images/background.jpg);
+  background-image: url(/images/backgroundBlack.jpg);
 }
 .header__index {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  list-style: none;
   .logo {
     margin-top: 15px;
     margin-left: 15px;
@@ -16,7 +18,7 @@ body {
   .nav__index {
     display: flex;
     justify-content: space-evenly;
-    margin-left: 70%;
+
     li {
       padding-left: 5px;
       padding-right: 5px;
@@ -28,6 +30,10 @@ body {
         text-decoration: none;
       }
     }
+  }
+
+  .nav-item {
+    list-style: none;
   }
 }
 .link__color {
@@ -142,11 +148,27 @@ body {
   }
 }
 
+
+
+.botonProducto{
+  display: block;
+
+  .boton{
+    width: 100%;
+  }
+
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+//Button Carrito
+
+
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*Titulo*/
 
 .titulo {
+  padding-top: 10%;
   text-align: center;
   margin-left: 37%;
   text-transform: uppercase;

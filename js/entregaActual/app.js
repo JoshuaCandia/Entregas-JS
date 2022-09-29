@@ -1,4 +1,4 @@
-import { buscarProductos } from "./modules.js";
+import { buscarProductos, setearBotones } from "./modules.js";
 
 /*---------------------------------------------------------------------------------*/
 
@@ -7,6 +7,9 @@ let buscador = document.getElementById("buscador");
 let botonBuscador = document.getElementById("botonBuscador");
 
 /*------------------------------------App------------------------------------------*/
+
+obtenerCarritoDelStorage()
+/*---------------------------------------------------------------------------------*/
 
 botonBuscador.onclick = () => {
   let listado = document.getElementById("listado");
@@ -22,28 +25,23 @@ botonBuscador.onclick = () => {
         "<img class='imagen__producto' src=" + resultado.imagen + " >";
       productos += "<li>Nombre: " + resultado.nombre + "</li>";
       productos += "<li>Precio: $" + resultado.precio + "</li>";
-      productos += "<li class='botonComprar'></li>";
+      productos += "<li class='botonProducto'></li>";
+    
       productos += "</ul></div>";
     });
 
     productos += "</div>";
     listado.innerHTML = productos;
 
-    let elementosComprar = document.getElementsByClassName("botonComprar");
-
-    for (let index = 0; index < elementosComprar.length; index++) {
-      const element = elementosComprar[index];
-
-      let boton = document.createElement("button");
-      boton.innerText = "Comprar";
-      boton.onclick = () => {
-        Swal.fire("Comprado", "Muchas Gracias!", "success");
-      };
-
-      element.appendChild(boton);
-    }
+    setearBotones();
   } else {
     listado.innerHTML =
       "<p>No existen productos con el criterio de busqueda</p>";
   }
 };
+
+/*---------------------------------------------------------------------------------*/
+
+let elementosAñadirAlCarrito = document.getElementsByClassName(
+  "botonAñadirAlCarrito"
+);

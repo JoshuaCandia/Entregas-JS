@@ -158,7 +158,7 @@ citys.appendChild(nuevoLi);
 let nuevoPaisVen = document.createElement("li");
 
 nuevoPaisVen.innerText = "Venezuela";
-nuevoPaisVen.setAttribute("class","paises")
+nuevoPaisVen.setAttribute("class", "paises");
 
 listaPaises.append(nuevoPaisVen);
 
@@ -208,14 +208,14 @@ const listaNombres = [
 let listaPersonas = document.getElementById("personas");
 
 for (const nombres of listaNombres) {
-   let li = document.createElement("li");
-   li.innerText = nombres
-   listaPersonas.appendChild(li)
-   li.setAttribute("class","listaPersonas")
+  let li = document.createElement("li");
+  li.innerText = nombres;
+  listaPersonas.appendChild(li);
+  li.setAttribute("class", "listaPersonas");
 }
 
-
-
+let ciudades2 = document.getElementsByClassName("ciudades");
+console.log(ciudades2);
 
 console.log("---------------------------------------------");
 

@@ -3,12 +3,14 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-image: url(/images/background.jpg);
+  background-image: url(/images/backgroundBlack.jpg);
 }
 
 .header__index {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  list-style: none;
 }
 .header__index .logo {
   margin-top: 15px;
@@ -18,7 +20,6 @@ body {
 .header__index .nav__index {
   display: flex;
   justify-content: space-evenly;
-  margin-left: 70%;
 }
 .header__index .nav__index li {
   padding-left: 5px;
@@ -30,6 +31,9 @@ body {
   font-size: 20px;
   color: white;
   text-decoration: none;
+}
+.header__index .nav-item {
+  list-style: none;
 }
 
 .link__color {
@@ -141,9 +145,18 @@ body {
   transition-duration: 0.1s;
 }
 
+.botonProducto {
+  display: block;
+}
+.botonProducto .boton {
+  width: 100%;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*Titulo*/
 .titulo {
+  padding-top: 10%;
   text-align: center;
   margin-left: 37%;
   text-transform: uppercase;

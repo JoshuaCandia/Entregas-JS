@@ -175,6 +175,48 @@ function opcionesDePago(producto) {
 }
 
 /*---------------------------------------------------------------------------------*/
+
+function guardarCarritoEnElStorage(productosEnElCarrito) {
+  localStorage.setItem("productos", JSON.stringify(productosEnElCarrito));
+}
+
+function obtenerCarritoDelStorage() {
+  let getProducts = localStorage.getItem("carritoDeProductos");
+  if (getProducts != null) {
+    listadoCarrito = JSON.parse(getProducts);
+  }
+}
+
+/*---------------------------------------------------------------------------------*/
+//Setear Botones
+
+function setearBotones() {
+  let elementosComprar = document.getElementsByClassName("botonProducto");
+
+  for (let index = 0; index < elementosComprar.length; index++) {
+    const element = elementosComprar[index];
+    let boton = document.createElement("button");
+    boton.innerText = "Comprar ahora";
+    boton.onclick = () => {
+      Swal.fire("Comprado", "Muchas Gracias!", "success");
+    };
+    let buttonAddCart = document.createElement("button");
+    buttonAddCart.innerText = "Agregar al Carrito";
+    buttonAddCart.onclick = () => {
+      listaCarrito.push(productos[index]);
+      guardarCarritoEnElStorage(listaCarrito);
+      
+    };
+
+    boton.setAttribute("class", "boton");
+    buttonAddCart.setAttribute("class", "boton");
+
+    element.appendChild(boton);
+    element.appendChild(buttonAddCart);
+  }
+}
+
+/*---------------------------------------------------------------------------------*/
 //Function Buscar Productos
 
 function buscarProductos(textoBusqueda) {
@@ -197,6 +239,7 @@ let productos = [
   producto9Obj,
 ];
 
+let listaCarrito = [];
 /*---------------------------------------------------------------------------------*/
 //Exports
 
@@ -207,5 +250,8 @@ export {
   opcionesDePago,
   productos,
   buscarProductos,
+  setearBotones,
+  guardarCarritoEnElStorage,
+  obtenerCarritoDelStorage,
 };
 /*---------------------------------------------------------------------------------*/

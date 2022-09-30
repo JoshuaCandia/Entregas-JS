@@ -1,4 +1,8 @@
-import { buscarProductos, setearBotones } from "./modules.js";
+import {
+  buscarProductos,
+  setearBotones,
+  obtenerCarritoDelStorage,
+} from "./modules.js";
 
 /*---------------------------------------------------------------------------------*/
 
@@ -8,7 +12,7 @@ let botonBuscador = document.getElementById("botonBuscador");
 
 /*------------------------------------App------------------------------------------*/
 
-obtenerCarritoDelStorage()
+obtenerCarritoDelStorage();
 /*---------------------------------------------------------------------------------*/
 
 botonBuscador.onclick = () => {
@@ -26,7 +30,6 @@ botonBuscador.onclick = () => {
       productos += "<li>Nombre: " + resultado.nombre + "</li>";
       productos += "<li>Precio: $" + resultado.precio + "</li>";
       productos += "<li class='botonProducto'></li>";
-    
       productos += "</ul></div>";
     });
 

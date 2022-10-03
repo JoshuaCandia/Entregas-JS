@@ -301,11 +301,49 @@ console.log("---------------------------------------------");
 /*---------------------------------------------------------------------------------*/
 
 /*
-Todo 
+Todo  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<    Eventos   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 */
+
+/*
+* AddEventListener
+*/
+
+let botonPractica = document.getElementById("botonPractica")
+
+botonPractica.innerText = ("Dame Click")
+
+botonPractica.addEventListener("click",dameClick)
+
+
+function dameClick() {
+  console.log("Me estas dando click")
+}
 
 console.log("---------------------------------------------");
 
+
+/*
+*  Manera Semantica
+*/
+
+let botonPractica2 = document.getElementById("botonPractica2")
+
+botonPractica2.innerText = ("Dame Click 2.0")
+
+botonPractica2.onclick = () => console.log("Me diste click en el 2")
+
+/*
+! Juego de No Tocar
+*/
+
+let divJuegoNoTocar = document.getElementById("divNoTocar")
+
+divJuegoNoTocar.addEventListener("mouseover",mouseOverJuego)
+
+function mouseOverJuego() {
+  alert("Perdiste salamin")
+  return;
+}
 /*---------------------------------------------------------------------------------*/
 
 /*

@@ -65,12 +65,18 @@ let productos = [
 
 let listaCarrito = [];
 
-/*---------------------------------------------------------------------------------*/
-//Variables Globales
+/*
+* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Variables Globales <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
 
 const suma = (a, b) => a + b;
 const division = (a, b) => a / b;
 const iva = (x) => x * 0.21;
+
+
+/*
+* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Funciones <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
 
 /*---------------------------------------------------------------------------------*/
 //Funcion objetos nuevos
@@ -104,10 +110,8 @@ function menuBuscador() {
 
 
 /*---------------------------------------------------------------------------------*/
-
-/*
- * Storage Funcion
- */
+//Storage Funcion
+ 
 
 function guardarCarritoEnElStorage(productosEnElCarrito) {
   localStorage.setItem("productos", JSON.stringify(productosEnElCarrito));
@@ -158,8 +162,11 @@ function buscarProductos(textoBusqueda) {
   );
 }
 
-/*---------------------------------------------------------------------------------*/
-//Exports
+
+
+/*
+* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Exports <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*/
 
 export {
   productos,

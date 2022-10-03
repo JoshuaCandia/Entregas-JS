@@ -55,47 +55,46 @@ botonBuscador.onclick = () => {
 //Funcion Mostrar Catalogo
 
 function mostrarCatalogo() {
-  document.getElementById("divCatalogo").style.display = "grid"
+  document.getElementById("divCatalogo").style.display = "grid";
   document.getElementById("botonOcultar").style.display = "block";
-  botonCatalogo.style.display= "none"
+  botonCatalogo.style.display = "none";
 }
-
 
 //Funcion Ocultar Catalogo
 
 function ocultarCatalogo() {
-  document.getElementById("divCatalogo").style.display = "none"
+  document.getElementById("divCatalogo").style.display = "none";
   document.getElementById("botonOcultar").style.display = "none";
-  botonCatalogo.style.display= "block"
+  botonCatalogo.style.display = "block";
 }
 
 /*---------------------------------------------------------------------------------*/
 
-let botonCatalogo = document.getElementById("botonCatalogo")
+let botonCatalogo = document.getElementById("botonCatalogo");
 
-let botonOcultar = document.getElementById("botonOcultar")
+let botonOcultar = document.getElementById("botonOcultar");
 
-botonCatalogo.onclick = ()=>{
-  mostrarCatalogo()
-}
+botonCatalogo.onclick = () => {
+  mostrarCatalogo();
+};
 
-botonOcultar.onclick = ()=>{
-  ocultarCatalogo()
-}
+botonOcultar.onclick = () => {
+  ocultarCatalogo();
+};
 
 let divCatalogo = document.getElementById("divCatalogo");
 
-  productos.forEach((producto) => {
-    let card = document.createElement("div");
+productos.forEach((producto) => {
+  let card = document.createElement("div");
+  card.className = "cardCatalogo"
 
-    card.innerHTML = `<div class ="divCatalogo" id="${producto.id}">
+  card.innerHTML = `<div class ="divCatalogo" id="${producto.id}">
     <img class ="imgCatalogo" src="${producto.imagen}">
     <h3 class ="nombreCatalogo">${producto.nombre}</h3>
     <h4 class ="precioCatalogo">Precio: ${producto.precio}$</h4>
   </div>`;
 
-    divCatalogo.appendChild(card);
-  });
-
+  divCatalogo.appendChild(card);
+});
 
 /*---------------------------------------------------------------------------------*/

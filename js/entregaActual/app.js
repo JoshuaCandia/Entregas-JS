@@ -3,6 +3,7 @@ import {
   buscarProductos,
   setearBotones,
   obtenerCarritoDelStorage,
+  
 } from "./modules.js";
 
 /*---------------------------------------------------------------------------------*/

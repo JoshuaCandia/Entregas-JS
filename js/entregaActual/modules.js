@@ -1,63 +1,69 @@
 /*---------------------------------------------------------------------------------*/
 //Objetos
 
-let producto1Obj = {
-  id: 1,
-  nombre: "Matafuego",
-  precio: 15500,
-  imagen: "/images/matafuego.jpg",
-};
+let producto1Obj = new Producto(
+  1,
+  "Matafuego de 5kg ABC",
+  15500,
+  "/images/matafuego.jpg"
+);
 
-let producto2Obj = {
-  id: 2,
-  nombre: "Chaleco",
-  precio: 2500,
-  imagen: "/images/chalecos.png",
-};
+let producto2Obj = new Producto(2, "Chaleco", 2500, "/images/chalecos.png");
 
-let producto3Obj = {
-  id: 3,
-  nombre: "Balizas",
-  precio: 3000,
-  imagen: "/images/balizas.jpg",
-};
+let producto3Obj = new Producto(3, "Balizas", 3000, "/images/balizas.jpg");
 
-let producto4Obj = {
-  id: 4,
-  nombre: "Paquete",
-  precio: 20000,
-  imagen: "/images/paquete.jpg",
-};
-let producto5Obj = {
-  id: 4,
-  nombre: "Matafuego x6 lts AK",
-  precio: 32350,
-  imagen: "/images/acetato.jpg",
-};
-let producto6Obj = {
-  id: 4,
-  nombre: "Matafuego x5kg Co2",
-  precio: 54000,
-  imagen: "/images/co2.png",
-};
-let producto7Obj = {
-  id: 4,
-  nombre: "Botiquin de Madera N°25",
-  precio: 12500,
-  imagen: "/images/botiquin.jpg",
-};
-let producto8Obj = {
-  id: 4,
-  nombre: "Carteleria Variada",
-  precio: 1000,
-  imagen: "/images/carteles.png",
-};
-let producto9Obj = {
-  id: 4,
-  nombre: "Sifon + Garrafa ",
-  precio: 23000,
-  imagen: "/images/sifon.png",
-};
+let producto4Obj = new Producto(4, "Paquete", 20000, "/images/paquete.jpg");
+
+let producto5Obj = new Producto(
+  5,
+  "Matafuego x6 lts AK",
+  32350,
+  "/images/acetato.jpg"
+);
+
+let producto6Obj = new Producto(
+  6,
+  "Matafuego x5kg Co2",
+  54000,
+  "/images/co2.png"
+);
+
+let producto7Obj = new Producto(
+  7,
+  "Botiquin de Madera N°25",
+  12500,
+  "/images/botiquin.jpg"
+);
+
+let producto8Obj = new Producto(
+  8,
+  "Carteleria Variada",
+  1000,
+  "/images/carteles.png"
+);
+
+let producto9Obj = new Producto(
+  9,
+  "Sifon + Garrafa ",
+  23000,
+  "/images/sifon.png"
+);
+
+/*---------------------------------------------------------------------------------*/
+//Arrays
+let productos = [
+  producto1Obj,
+  producto2Obj,
+  producto3Obj,
+  producto4Obj,
+  producto5Obj,
+  producto6Obj,
+  producto7Obj,
+  producto8Obj,
+  producto9Obj,
+];
+
+let listaCarrito = [];
 
 /*---------------------------------------------------------------------------------*/
 //Variables Globales
@@ -65,6 +71,16 @@ let producto9Obj = {
 const suma = (a, b) => a + b;
 const division = (a, b) => a / b;
 const iva = (x) => x * 0.21;
+
+/*---------------------------------------------------------------------------------*/
+//Funcion objetos nuevos
+
+function Producto(id, nombreCompleto, precio, imagen) {
+  this.id = id;
+  this.nombre = nombreCompleto;
+  this.precio = precio;
+  this.imagen = imagen;
+}
 
 /*---------------------------------------------------------------------------------*/
 //Funcion menu Inicial
@@ -79,6 +95,29 @@ function menuInicial() {
   }
   if (eleccion > 0 || eleccion < 1) return 0;
 }
+/*---------------------------------------------------------------------------------*/
+//Funcion mostar Catalogo
+/*
+let Catalogo = document.getElementById("divCatalogo")
+let botonCatalogo = document.getElementById("botonCatalogo");
+
+botonCatalogo.onclick = () => {
+  mostrarCatalogo();
+  let divOcultar = document.getElementById("divBotonOcultar")
+
+  let botonOcultar = document.createElement("button")
+  
+  botonOcultar.innerText= ("Ocultar Catalogo")
+
+  botonOcultar.onclick = () =>{
+    Catalogo.innerHTML = ``
+  }
+
+  botonOcultar.append(divOcultar)
+};
+*/
+
+
 /*---------------------------------------------------------------------------------*/
 //Funcion de Busqueda
 
@@ -176,6 +215,10 @@ function opcionesDePago(producto) {
 
 /*---------------------------------------------------------------------------------*/
 
+/*
+ * Storage Funcion
+ */
+
 function guardarCarritoEnElStorage(productosEnElCarrito) {
   localStorage.setItem("productos", JSON.stringify(productosEnElCarrito));
 }
@@ -189,6 +232,7 @@ function obtenerCarritoDelStorage() {
 
 /*---------------------------------------------------------------------------------*/
 //Setear Botones
+
 
 function setearBotones() {
   let elementosComprar = document.getElementsByClassName("botonProducto");
@@ -205,7 +249,6 @@ function setearBotones() {
     buttonAddCart.onclick = () => {
       listaCarrito.push(productos[index]);
       guardarCarritoEnElStorage(listaCarrito);
-      
     };
 
     boton.setAttribute("class", "boton");
@@ -226,29 +269,14 @@ function buscarProductos(textoBusqueda) {
 }
 
 /*---------------------------------------------------------------------------------*/
-//Arrays
-let productos = [
-  producto1Obj,
-  producto2Obj,
-  producto3Obj,
-  producto4Obj,
-  producto5Obj,
-  producto6Obj,
-  producto7Obj,
-  producto8Obj,
-  producto9Obj,
-];
-
-let listaCarrito = [];
-/*---------------------------------------------------------------------------------*/
 //Exports
 
 export {
+  productos,
   menuInicial,
   opcionDeCompra,
   calculoPago,
   opcionesDePago,
-  productos,
   buscarProductos,
   setearBotones,
   guardarCarritoEnElStorage,

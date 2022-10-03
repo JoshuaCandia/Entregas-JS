@@ -22,25 +22,16 @@
     />
   </head>
   <body>
+
+    <!-- *Header -->
     <header class="header__index">
+      
       <img class="logo" src="/images/BLANCO f.png" alt="Logo" />
-      <nav class="nav__index">
-        <li>
-          <a
-            target="_blank"
-            href="https://www.youtube.com/watch?v=mCdA4bJAGGk&ab_channel=sweetblue."
-            >Inicio</a
-          >
-        </li>
-        <li><a class="link__color" href="#">Tienda</a></li>
-        <li>
-          <a
-            target="_blank"
-            href="https://www.youtube.com/watch?v=mCdA4bJAGGk&ab_channel=sweetblue."
-            >Contacto</a
-          >
-        </li>
-      </nav>
+    
+      <div class="botones">
+      <button id="botonCatalogo">Ver Catálogo</button>
+      <button id="botonOcultar">Ocultar Catalogo</button>
+    </div>
       <li className="nav-item">
         <a
           id="botonCarrito"
@@ -53,14 +44,28 @@
     </ul>
   </div>
     </header>
+
+    <!-- *Main -->
+    
     <main class="index__main">
+
+      <div id="divCatalogo"></div>
+    
+      </div>
+      <div class="divTitulo">
       <h2 class="titulo">Buscador de Productos</h2>
+    </div>
+
       <div class="inputBusqueda">
+        
         <input id="buscador" type="text" />
         <button id="botonBuscador" type="button">Buscar</button>
       </div>
       <div id="listado"></div>
     </main>
+
+    <!-- *Footer -->
+
     <footer class="footer__index"></footer>
   </body>
 

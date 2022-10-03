@@ -9,7 +9,7 @@ body {
 .header__index {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
 }
 .header__index .logo {
@@ -54,9 +54,6 @@ body {
   border-radius: 5%;
 }
 
-#listado {
-  margin-left: 10%;
-}
 #listado p {
   font-size: 25px;
   color: white;
@@ -66,7 +63,8 @@ body {
 
 .productos {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 33% 34% 33%;
+  justify-content: center;
 }
 .productos .producto {
   margin-top: 10%;
@@ -86,7 +84,7 @@ body {
   margin-bottom: 4%;
   border: 2px solid black;
   width: 50%;
-  height: 300px;
+  height: px;
 }
 
 .footer__index {
@@ -178,10 +176,14 @@ body {
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*Titulo*/
+.divTitulo {
+  display: flex;
+  justify-content: center;
+}
+
 .titulo {
   padding-top: 10%;
   text-align: center;
-  margin-left: 37%;
   text-transform: uppercase;
   background-image: linear-gradient(-225deg, #747474 0%, #ffffff 29%, #a7a7a7 67%, #ffffff 100%);
   background-size: auto auto;
@@ -210,4 +212,33 @@ body {
 }
 .imagen__producto {
   box-shadow: 6px 6px 57px -3px rgba(0, 0, 0, 0.75);
+}
+
+/*----------------------------------------  Catalogo  -------------------------------------*/
+#botonOcultar {
+  display: none;
+}
+
+#divCatalogo {
+  display: none;
+  margin-top: 10%;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: center;
+}
+
+.divCatalogo {
+  justify-content: center;
+  width: 50%;
+}
+
+.imgCatalogo {
+  width: 50%;
+}
+
+.nombreCatalogo {
+  color: white;
+}
+
+.precioCatalogo {
+  color: white;
 }/*# sourceMappingURL=main.css.map */

@@ -135,13 +135,13 @@ console.log("---------------------------------------------");
 /*
 Todo Creacion de Elementos
 */
-
+/*
 let texto = document.createElement("p");
 
 texto.innerHTML = "<h2>Hola Gente!</h2>";
 
 document.body.append(texto);
-
+*/
 console.log("---------------------------------------------");
 
 listaPaises = document.getElementById("listaPaises");
@@ -193,7 +193,7 @@ console.log("---------------------------------------------");
 /*
 Todo Practica #1
 */
-
+/*
 const listaNombres = [
   "Joshua",
   "Melanie",
@@ -216,14 +216,85 @@ for (const nombres of listaNombres) {
 
 let ciudades2 = document.getElementsByClassName("ciudades");
 console.log(ciudades2);
-
+*/
 console.log("---------------------------------------------");
+
+/*
+Todo Ejemplo function que consulte al usuario opcion deseada
+*/
+
+/*
+ * <<<<<<<<<<<<Declaracion de Objetos>>>>>>>>>>>>
+ */
+const lib1 = new libros(1, "Peter Pan", "James Matthew Barrie", 1911, 10500);
+
+const lib2 = new libros(2, "Sherlock Holmes", "Arthur Conan Doyle", 1892, 3200);
+
+const lib3 = new libros(3, "Cien Años de Soledad", "G. García M.", 1967, 5430);
+
+const lib4 = new libros(4, "1984", "George Orwell", 1949, 2500);
+
+const lib5 = new libros(5, "El Alquimista", "Paulo Coelho", 1988, 2000);
+
+const lib6 = new libros(6, "Muerte en el Nilo", "Agatha Christie", 1937, 7900);
+
+const libreria = [];
+libreria.push(lib1, lib2, lib3, lib4, lib5, lib6);
+
+/*
+ * <<<<<<<<<<<<Declaracion de Funcion Constructora>>>>>>>>>>>>
+ */
+function libros(id, titulo, autor, añoDePublicacion, precio, imagen) {
+  this.id = id;
+  this.titulo = titulo;
+  this.autor = autor;
+  this.añoDePublicacion = añoDePublicacion;
+  this.precio = precio;
+
+  /*
+   * Metodo Personalizado
+   */
+
+  this.mostrarDatos = function () {
+    console.log(`El nombre del libro es ${this.titulo},y su precio es
+    de $${this.precio}`);
+  };
+}
 
 /*---------------------------------------------------------------------------------*/
 
 /*
-Todo 
+Todo Crear Card Con los datos
+ de los objetos
 */
+
+function mostrarCatalogo() {
+  let bootstrapCard = document.getElementById("bootstrapCard");
+let card = ``;
+libreria.forEach((libro) => {
+  let card = document.createElement("div");
+
+
+
+  card.innerHTML = `<div id=${libro.id} class="card" style="width: 18rem">
+<img class="card-img-top" style="height: 250px" src="/images/gatito.jpg" alt="Card image cap" />
+<div class="card-body">
+  <h4 class="card-title">${libro.titulo}</h4>
+  <h5 class="card-title">De ${libro.autor}</h5>
+  <p class="card-text">
+    Este libro fue publicado en ${libro.añoDePublicacion} 
+    Tiene un valor de ${libro.precio}
+  </p>
+  <a href="#" class="btn btn-primary">Comprar Ahora</a>
+</div>
+</div>`;
+
+  bootstrapCard.append(card);
+});
+}
+
+
+
 
 console.log("---------------------------------------------");
 

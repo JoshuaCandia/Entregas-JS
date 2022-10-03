@@ -1,4 +1,5 @@
 import {
+  productos,
   buscarProductos,
   setearBotones,
   obtenerCarritoDelStorage,
@@ -11,9 +12,13 @@ let buscador = document.getElementById("buscador");
 let botonBuscador = document.getElementById("botonBuscador");
 
 /*------------------------------------App------------------------------------------*/
-
+/*
+ * Storage llamada
+ */
 obtenerCarritoDelStorage();
 /*---------------------------------------------------------------------------------*/
+
+//Buscador de Productos
 
 botonBuscador.onclick = () => {
   let listado = document.getElementById("listado");
@@ -24,7 +29,7 @@ botonBuscador.onclick = () => {
     let productos = "<div class='productos'>";
 
     resultados.forEach((resultado) => {
-      productos += "<div class='producto'><ul>";
+      productos += "<div class='producto'><ul class =`ul__producto`>";
       productos +=
         "<img class='imagen__producto' src=" + resultado.imagen + " >";
       productos += "<li>Nombre: " + resultado.nombre + "</li>";
@@ -45,6 +50,52 @@ botonBuscador.onclick = () => {
 
 /*---------------------------------------------------------------------------------*/
 
-let elementosAñadirAlCarrito = document.getElementsByClassName(
-  "botonAñadirAlCarrito"
-);
+//Catalogo Oculto
+/*---------------------------------------------------------------------------------*/
+//Funcion Mostrar Catalogo
+
+function mostrarCatalogo() {
+  document.getElementById("divCatalogo").style.display = "grid"
+  document.getElementById("botonOcultar").style.display = "block";
+  botonCatalogo.style.display= "none"
+}
+
+
+//Funcion Ocultar Catalogo
+
+function ocultarCatalogo() {
+  document.getElementById("divCatalogo").style.display = "none"
+  document.getElementById("botonOcultar").style.display = "none";
+  botonCatalogo.style.display= "block"
+}
+
+/*---------------------------------------------------------------------------------*/
+
+let botonCatalogo = document.getElementById("botonCatalogo")
+
+let botonOcultar = document.getElementById("botonOcultar")
+
+botonCatalogo.onclick = ()=>{
+  mostrarCatalogo()
+}
+
+botonOcultar.onclick = ()=>{
+  ocultarCatalogo()
+}
+
+let divCatalogo = document.getElementById("divCatalogo");
+
+  productos.forEach((producto) => {
+    let card = document.createElement("div");
+
+    card.innerHTML = `<div class ="divCatalogo" id="${producto.id}">
+    <img class ="imgCatalogo" src="${producto.imagen}">
+    <h3 class ="nombreCatalogo">${producto.nombre}</h3>
+    <h4 class ="precioCatalogo">Precio: ${producto.precio}$</h4>
+  </div>`;
+
+    divCatalogo.appendChild(card);
+  });
+
+
+/*---------------------------------------------------------------------------------*/

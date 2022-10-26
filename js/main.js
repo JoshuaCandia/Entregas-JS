@@ -1,12 +1,15 @@
-import { loadCartComponent } from '../components/cart/cart.js';
-import { searchProducts, loadProductsComponent } from '../components/products/products.js';
+import { loadCartComponent } from "../components/cart/cart.js";
+import {
+  searchProducts,
+  loadProductsComponent,
+} from "../components/products/products.js";
 
-let searchInput = document.getElementById('searchInput');
-let searchButton = document.getElementById('searchButton');
-let cartButton = document.getElementById('cartButton');
+let searchInput = document.getElementById("searchInput");
+let searchButton = document.getElementById("searchButton");
+let cartButton = document.getElementById("cartButton");
 
 searchInput.onkeydown = (ev) => {
-  if (ev.keyCode == '13') {
+  if (ev.keyCode == "13") {
     searchProducts(searchInput.value);
   }
 };
@@ -16,7 +19,8 @@ searchButton.onclick = () => {
 };
 
 cartButton.onclick = () => {
-    loadCartComponent();
+  loadCartComponent();
 };
 
 loadProductsComponent();
+

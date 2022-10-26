@@ -3,94 +3,81 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-image: url(/images/backgroundBlack.jpg);
-}
+  background-image: url(/images/backgroundBlack.jpg); }
 
 .header__index {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  list-style: none;
-}
-.header__index .logo {
-  margin-top: 15px;
-  margin-left: 15px;
-  width: 150px;
-}
-.header__index .nav__index {
-  display: flex;
-  justify-content: space-evenly;
-}
-.header__index .nav__index li {
-  padding-left: 5px;
-  padding-right: 5px;
-  color: white;
-  list-style: none;
-}
-.header__index .nav__index li a {
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-}
-.header__index .nav-item {
-  list-style: none;
-}
+  list-style: none; }
+  .header__index .logo {
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 150px; }
+  .header__index .nav__index {
+    display: flex;
+    justify-content: space-evenly; }
+    .header__index .nav__index li {
+      padding-left: 5px;
+      padding-right: 5px;
+      color: white;
+      list-style: none; }
+      .header__index .nav__index li a {
+        font-size: 20px;
+        color: white;
+        text-decoration: none; }
+  .header__index .nav-item {
+    list-style: none; }
 
 .link__color {
-  color: lightslategrey;
-}
+  color: lightslategrey; }
 
-.inputBusqueda {
+.searchContainer {
   height: 10%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 10%;
-}
-.inputBusqueda #buscador {
-  width: 600px;
-  height: 30px;
-  border: none;
-  border-radius: 5%;
-}
+  align-items: flex-start; }
+  .searchContainer #searchInput {
+    width: 600px;
+    height: 30px;
+    border: none;
+    border-radius: 5%; }
+
+#title {
+  color: #FFF;
+  margin-top: 24px;
+  margin-left: 24px; }
 
 #listado p {
   font-size: 25px;
   color: white;
   margin-top: 5%;
-  text-align: center;
-}
+  text-align: center; }
 
 .productos {
   display: grid;
   grid-template-columns: 33% 34% 33%;
   justify-content: center;
-  padding-left: 10%;
-}
-.productos .producto {
-  margin-top: 10%;
-}
-.productos .producto ul {
-  list-style: none;
-}
-.productos .producto ul li {
-  width: 50%;
-  font-size: 20px;
-  color: white;
-  text-align: center;
-}
+  padding-left: 10%; }
+  .productos .producto {
+    margin-top: 10%; }
+    .productos .producto ul {
+      list-style: none; }
+      .productos .producto ul li {
+        width: 50%;
+        font-size: 20px;
+        color: white;
+        text-align: center; }
 
 .imagen__producto {
   margin-top: 10%;
   margin-bottom: 4%;
   border: 2px solid black;
   width: 50%;
-  height: px;
-}
+  height: px; }
 
 .footer__index {
-  margin-top: 10% a;
-}
+  margin-top: 10%a; }
 
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*Botones*/
@@ -108,17 +95,15 @@
   border-radius: 6px;
   color: #24292e;
   background-color: #fafbfc;
-  border-color: rgba(27, 31, 35, 0.1490196078);
+  border-color: #1b1f2326;
   box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-  transition-property: color, background-color, border-color;
-}
+  transition-property: color, background-color, border-color; }
 
 #botonBuscador:hover {
   background-color: #ffc107;
-  border-color: rgba(27, 31, 35, 0.1490196078);
-  transition-duration: 0.1s;
-}
+  border-color: #1b1f2326;
+  transition-duration: 0.1s; }
 
 /*            Boton Catalogo               */
 #botonCatalogo {
@@ -135,17 +120,15 @@
   border-radius: 6px;
   color: #24292e;
   background-color: #fafbfc;
-  border-color: rgba(27, 31, 35, 0.1490196078);
+  border-color: #1b1f2326;
   box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-  transition-property: color, background-color, border-color;
-}
+  transition-property: color, background-color, border-color; }
 
 #botonCatalogo:hover {
   background-color: #ffc107;
-  border-color: rgba(27, 31, 35, 0.1490196078);
-  transition-duration: 0.1s;
-}
+  border-color: #1b1f2326;
+  transition-duration: 0.1s; }
 
 .botonComprar button {
   margin-top: 10px;
@@ -161,58 +144,50 @@
   border-radius: 6px;
   color: #24292e;
   background-color: #fafbfc;
-  border-color: rgba(27, 31, 35, 0.1490196078);
+  border-color: #1b1f2326;
   box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-  transition-property: color, background-color, border-color;
-}
-.botonComprar button :hover {
-  background-color: #f3f4f6;
-  border-color: rgba(27, 31, 35, 0.1490196078);
-  transition-duration: 0.1s;
-}
+  transition-property: color, background-color, border-color; }
+  .botonComprar button :hover {
+    background-color: #f3f4f6;
+    border-color: #1b1f2326;
+    transition-duration: 0.1s; }
 
 .botonProducto {
   display: flex;
-  justify-content: space-between;
-}
-.botonProducto .boton {
-  margin-top: 10%;
-  padding: 1.3em 3em;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-}
-.botonProducto .boton:hover {
-  background-color: #ff9100;
-  box-shadow: 0px 15px 20px rgba(255, 187, 0, 0.4);
-  color: #fff;
-  transform: translateY(-7px);
-}
-.botonProducto .boton:active {
-  transform: translateY(-1px);
-}
+  justify-content: space-between; }
+  .botonProducto .boton {
+    margin-top: 10%;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none; }
+  .botonProducto .boton:hover {
+    background-color: #ff9100;
+    box-shadow: 0px 15px 20px rgba(255, 187, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px); }
+  .botonProducto .boton:active {
+    transform: translateY(-1px); }
 
 .botones {
-  margin-left: 45%;
-}
+  margin-left: 45%; }
 
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*Titulo*/
 .divTitulo {
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .titulo {
   padding-top: 10%;
@@ -226,67 +201,51 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: textclip 2s linear infinite;
-          animation: textclip 2s linear infinite;
+  animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size: 30px;
-}
-
-@-webkit-keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
+  font-size: 30px; }
 
 @keyframes textclip {
   to {
-    background-position: 200% center;
-  }
-}
+    background-position: 200% center; } }
+
 .imagen__producto {
-  box-shadow: 6px 6px 57px -3px rgba(0, 0, 0, 0.75);
-}
+  -webkit-box-shadow: 6px 6px 57px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 57px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 57px -3px rgba(0, 0, 0, 0.75); }
 
 /*----------------------------------------  Catalogo  -------------------------------------*/
 #botonOcultar {
-  display: none;
-}
+  display: none; }
 
 .cardCatalogo {
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
 
 #divCatalogo {
   display: none;
   padding-top: 10%;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 33% 34% 33%;
-  justify-content: flex-end;
-}
+  justify-content: flex-end; }
 
 .divCatalogo {
   justify-content: center;
-  width: 50%;
-}
+  width: 50%; }
 
 .imgCatalogo {
   width: 18rem;
-  height: 20rem;
-}
+  height: 20rem; }
 
 .nombreCatalogo {
-  color: white;
-}
+  color: white; }
 
 .precioCatalogo {
-  color: white;
-}
+  color: white; }
 
 /*********************************************************************************/
 #divNoTocar {
   background-color: lightcoral;
   margin-top: 2%;
   margin-left: 5%;
-  width: 5%;
-}/*# sourceMappingURL=main.css.map */
+  width: 5%; }

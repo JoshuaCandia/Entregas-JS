@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Matafuego de 5kg ABC",
+    "price": 15500,
+    "image": "/images/matafuego.jpg",
+    "description":"Matafuego de 5kg ABC apto para todo tipo de fuego"
+  },
+  {
+    "id": 2,
+    "name": "Chaleco",
+    "price": 7000,
+    "image": "/images/chalecos.png",
+    "description":"Chalecos reflectivos"
+  },
+  {
+    "id": 3,
+    "name": "Balizas",
+    "price": 2500,
+    "image": "/images/balizas.jpg",
+    "description":"Balizas Homologadas apta para Vtv"
+  },
+  {
+    "id": 4,
+    "name": "Combo baliza + matafuego + chaleco + botiquin ",
+    "price": 800,
+    "image": "/images/paquete.jpg",
+    "description":"Combo para Vtv"
+  },
+  {
+    "id":5,
+    "name": "Matafuego x6 lts AK",
+    "price": 23300,
+    "image": "/images/acetato.jpg",
+    "description":"Matafuego de 6lts AK apto para la cocina"
+  },
+  {
+    "id": 6,
+    "name": "Matafuego x5kg Co2",
+    "price": 17900,
+    "image": "/images/co2.png",
+    "description": "Matafuego de 5kg Co2 apto para fuegos tipo BC"
+  },
+  {
+    "id": 7,
+    "name": "Botiquin de Madera N°25",
+    "price": 9835,
+    "image": "/images/botiquin.jpg",
+    "description":"Botiquin N°25"
+  },
+  {
+    "id": 8,
+    "name": "Carteleria Variada",
+    "price": 2640,
+    "image": "/images/carteles.png",
+    "description":"Carteles de todo tipo"
+  },
+  {
+    "id": 9,
+    "name": "Sifon + Garrafa",
+    "price": 21980,
+    "image": "/images/sifon.png",
+    "description":"Sifon Drago con Garrafa ideal para preparar Soda"
+  }
+]

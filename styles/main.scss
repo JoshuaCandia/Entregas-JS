@@ -1,3 +1,4 @@
+
 .body__index {
   width: 100%;
   box-sizing: border-box;
@@ -40,19 +41,25 @@
   color: lightslategrey;
 }
 
-.inputBusqueda {
+.searchContainer {
   height: 10%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 10%;
-  #buscador {
+  #searchInput {
     width: 600px;
     height: 30px;
     border: none;
     border-radius: 5%;
   }
 }
+
+#title{
+  color: #FFF;
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
 #listado {
   p {
     font-size: 25px;
@@ -71,7 +78,6 @@
   .producto {
     margin-top: 10%;
     ul {
-
       list-style: none;
       li {
         width: 50%;
@@ -92,7 +98,6 @@
 .footer__index {
   margin-top: 10%a;
 }
-
 
 /*-------------------------------------------------------------------------------------------------------------------*/
 
@@ -117,7 +122,6 @@
     rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   transition-property: color, background-color, border-color;
-  
 }
 #botonBuscador:hover {
   background-color: #ffc107;
@@ -146,14 +150,12 @@
     rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   transition-property: color, background-color, border-color;
-  
 }
 #botonCatalogo:hover {
   background-color: #ffc107;
   border-color: #1b1f2326;
   transition-duration: 0.1s;
 }
-
 
 .botonComprar {
   button {
@@ -215,8 +217,8 @@
   }
 }
 
-.botones{
-  margin-left: 45%
+.botones {
+  margin-left: 45%;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -267,11 +269,11 @@
 }
 
 /*----------------------------------------  Catalogo  -------------------------------------*/
-#botonOcultar{
+#botonOcultar {
   display: none;
 }
 
-.cardCatalogo{
+.cardCatalogo {
   display: flex;
   justify-content: center;
 }
@@ -284,7 +286,6 @@
   justify-content: flex-end;
 }
 .divCatalogo {
-  
   justify-content: center;
   width: 50%;
 }
@@ -301,20 +302,10 @@
   color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
 /*********************************************************************************/
 //Practicas HTML
 
-#divNoTocar{
+#divNoTocar {
   background-color: lightcoral;
   margin-top: 2%;
   margin-left: 5%;

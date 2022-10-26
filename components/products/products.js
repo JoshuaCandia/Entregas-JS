@@ -65,11 +65,16 @@ function showProducts(products) {
 
   productsHTML += '</div>';
 
+
+
   let productsContainerElement = document.getElementById('products-container');
   productsContainerElement.innerHTML = productsHTML;
 
   createProductsButtons(products);
+
 }
+
+
 
 function createProductsButtons(products) {
   let productButtonElements = document.getElementsByClassName('productButtons');
@@ -85,6 +90,7 @@ function createProductsButtons(products) {
     element.appendChild(addToCartButton);
   }
 }
+
 
 function createBuyButton(product) {
   let buyButton = document.createElement('button');
@@ -108,4 +114,9 @@ function createAddToCartButton(product) {
   return addToCartButton;
 }
 
+
+
+
 export { loadProductsComponent };
+
+

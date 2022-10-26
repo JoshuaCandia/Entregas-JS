@@ -56,9 +56,9 @@ function showProducts(products) {
 
   products.forEach((product) => {
     productsHTML += "<div class='producto'><ul class =`ul__producto`>";
-    productsHTML += "<img class='imagen__producto' src=" + product.image + ' >';
-    productsHTML += '<li>Nombre: ' + product.name + '</li>';
-    productsHTML += '<li>Precio: $' + product.price + '</li>';
+    productsHTML += "<div class='container-img'>'<img class=' imagen__producto' src=" + product.image + ' ></div>';
+    productsHTML += '<li  class="li-name" >Nombre: ' + product.name + '</li>';
+    productsHTML += '<li class="li-price">Precio: $' + product.price + '</li>';
     productsHTML += "<li class='productButtons'></li>";
     productsHTML += '</ul></div>';
   });

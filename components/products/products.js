@@ -71,7 +71,6 @@ function showProducts(products) {
   productsContainerElement.innerHTML = productsHTML;
 
   createProductsButtons(products);
-
 }
 
 

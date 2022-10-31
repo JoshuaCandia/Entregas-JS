@@ -17,7 +17,7 @@ function initCartComponent() {
   let productList = '<ul class="ul-cart">';
 
   productsInCart.forEach((product) => {
-    productList += '<li class="cart-product-'+ product.id + '">';
+    productList += '<li class="cart-div  cart-product-'+ product.id + '">';
     productList +=
       '<div class="cart-product-image"> <img class="imagen__producto" src="' + product.image + '"> </div>';
     productList +=

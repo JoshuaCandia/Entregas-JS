@@ -161,6 +161,35 @@ border-bottom: 1px solid #eaeaea;
 .boton:hover{
   background-color: #7caf57f8;
 }
+/*--------------------Cart-------------------------*/
+
+.cart-container{
+  background-color: #fff;
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  padding-top: 7%;
+  padding-bottom: 5%;
+}
+
+.ul-cart{
+  padding: 0;
+  
+  list-style: none;
+}
+.cart-product-buttons{
+  button{
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+  }
+}
+.cart-div{
+text-align: center;
+}
+.cart-product-image{
+
+}
 /*---------------------------------------------*/
 .footer__index {
   margin-top: 20%;
